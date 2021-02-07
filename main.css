@@ -17,6 +17,10 @@ body {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
     padding: 2em 2em 4em;
+     
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
 }
 
 h1, h2, h3, h4, h5,h6{
