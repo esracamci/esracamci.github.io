@@ -13,11 +13,11 @@ body {
     font-size: 16px;
     line-height: 1;
     margin: 0 auto;
-    max-width: 950px;
+    max-width: 800px;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
     padding: 2em 2em 4em;
-     
+
         -webkit-appearance: none;
         -moz-appearance: none;
         appearance: none;
@@ -40,8 +40,8 @@ h3 {
     color: #545454;
     margin-top: 0.8em;
     margin-bottom: 0.8em;
-    font-size: 20px;
-    font-weight: 350;
+    font-size: 24px;
+    font-weight: 600;
     line-height: 0;
 }
 /* name */
@@ -75,21 +75,21 @@ a:link {
 /* visited link */
 a:visited {
     color: #60178A;
-    text-decoration: underline;
+       text-decoration: none;
        font-size: 20px;
 }
 
 /* mouse over link */
 a:hover {
     color: #60178A;
-    text-decoration: underline;
+       text-decoration: none;
        font-size: 20px;
 }
 
 /* selected link */
 a:active {
     color: #60178A;
-    text-decoration: underline;
+    text-decoration: none;
        font-size: 20px;
 }
 
@@ -99,14 +99,23 @@ b, strong {
        font-size: 20px;
 }
 
-/* contact bar */
+/* navbar */
+
 
 
 .icon-bar {
     width: 100%;
     background-color: #175D8A;
     overflow: auto;
- 
+  content:"";
+  display:table;
+  width:100%;
+           margin-top: 0.8em;
+    margin-bottom: 0.8em;
+    height="25px";
+    position: -webkit-sticky; /* Safari */
+  position: sticky;
+     z-index: 100;
 }
 
 
@@ -114,12 +123,13 @@ b, strong {
     float: left;
     width: 20%;
     text-align: center;
-    padding: 0 -10px 0 0px;
+    padding: 0 0px 0 -0px;
     transition: all 0.3s ease;
     color: white;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 30px;
      font-weight: 300;
+
 }
 
 .icon-bar a:hover {
@@ -132,8 +142,14 @@ b, strong {
 </style>
 
 
+.clearfix::after{
+  content:"";
+  display:table;
+  width:100%;
+}
 
-/* contact bar end */
+
+/* nav bar end */
 samp {
     display: none;
 }
