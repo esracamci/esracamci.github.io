@@ -25,7 +25,7 @@ h3 {
     font-family: "Quicksand", Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 18px; 
     font-variant: normal; 
-    font-weight: bolder; 
+    font-weight: normal; 
     color:#8C749C;
     padding: 0;
     margin: 0;
@@ -33,13 +33,13 @@ h3 {
 }
 .title {
  font-family: "Quicksand", Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    padding: 3px 9px;
+    padding: 3px 9px 9px;
 }
 
 .topnav {
     overflow: hidden;
     background-color: #472060;
-    border-top: 5px solid #8C749C;
+    border: 2px solid #8C749C;
 }
 
 .topnav a {
@@ -82,11 +82,11 @@ table{
     font-family:  Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #545454;
     font-size: 16px;
-     align="right";
+ 
 }
 td {
   vertical-align:top;
-    align="right";
+   
 }
 
 a.purple:link{
