@@ -24,12 +24,12 @@ h1 {
 
 h2 { 
     font-family: "Quicksand", Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 14px; 
-     font-style: italic;
+    font-size: 12px; 
+    
     font-variant: normal; 
     font-weight: normal; 
-    color:#8C749C;
-    margin-top:-10px}
+    color:#545454;
+    margin-top:-5px}
     
 h3 { 
     font-family: "Quicksand", Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -39,7 +39,7 @@ h3 {
     color:#8C749C;
     padding: 0;
     margin: 0;
-    margin-top: 0.8em;  
+    margin-top: 0; 
 }
 .title {
  font-family: "Quicksand", Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -111,4 +111,19 @@ a.purple:link{
       a.purple:hover{
         color: #545454;
           font-size: 16px;
+      }
+
+a.purpleCV:link{
+        color: #294796;
+    font-size: 12px;
+    text-decoration: none;
+ 
+      }
+      a.purpleCV:visited{
+        color: #545454;
+          font-size: 12px;
+      }
+      a.purpleCV:hover{
+        color: #545454;
+          font-size: 12px;
       }
