@@ -185,13 +185,13 @@ h3 {
 
 .styled-table tbody tr.details {
     font-size: 12px;
-    background-color: #f3f3f3;
+
     vertical-align: top;
 }
 
 
 .styled-table tbody tr:nth-of-type {
-    background-color: #f3f3f3;
+
 }
 
 .styled-table tbody tr:last-of-type {
