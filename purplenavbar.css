@@ -18,6 +18,9 @@
     font-style: normal;
 }
 
+
+
+
 }
 
 
@@ -122,19 +125,85 @@ h3 {
   float: right;
 }
 
+/*/ tabletest /*/
+ div.container {
+    width:95%; 
+    margin:1%;
+      margin-left: auto;
+  margin-right: auto;
+  }
+.styled-table {
+    border-collapse: collapse;
+     margin-left: auto;
+  margin-right: auto;
+    margin: 5px 0;
+    font-size: 16px;
+    font-family: 'Montserrat', 'Lexend Mega','Open Sans', sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    color: #472060;
+}
 
 
+.styled-table thead tr {
+    font-size: 20px;
+    font-weight: bold;
+    color: #472060;
+    background-color: #fff;
+    text-align: left;
+     padding: 5px 5px;
+    vertical-align: top;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 5px 0px;
+}
+
+.styled-table td.year {
+    padding: 5px 16px;
+    text-align: left;
+}
+
+.styled-table td.pubs {
+    padding: 5px 15px;
+    text-align: left;
+     font-size: 16px;
+    font-weight: bold;
+    color: #472060;
+    vertical-align: top;
+}
+    
+.styled-table tbody tr {
+}
+
+.styled-table tbody tr.details {
+    font-size: 12px;
+    background-color: #f3f3f3;
+    vertical-align: top;
+}
+
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+    vertical-align: top;
+}
+
+.styled-table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
+/*/ 
 table{
     font-family: Frutiger, "Frutiger Linotype", Univers, Calibri,"Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #545454;
     font-size: 20px;
  
 }
-td {
-  vertical-align:top;
-    font-size: 20px;
-   
-}
+/*/ 
 
 a.purple:link{
         color: #294796;
@@ -151,16 +220,12 @@ a.purple:link{
       }
 
 a.purpleCV:link{
-        color: #294796;
-    font-size: 16px;
-    text-decoration: none;
+    color: #294796;
  
       }
-      a.purpleCV:visited{
+    a.purpleCV:visited{
         color: #545454;
-          font-size: 16px;
       }
       a.purpleCV:hover{
         color: #545454;
-          font-size: 16px;
       }
