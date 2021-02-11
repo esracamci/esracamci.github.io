@@ -140,7 +140,6 @@ h3 {
     font-size: 16px;
     font-family: 'Montserrat', 'Lexend Mega','Open Sans', sans-serif;
     min-width: 400px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
     color: #472060;
 }
 
@@ -165,11 +164,18 @@ h3 {
     text-align: left;
 }
 
-.styled-table td.pubs {
+.styled-table td.pubtype {
     padding: 5px 15px;
-    text-align: left;
      font-size: 16px;
     font-weight: bold;
+    color: #472060;
+    vertical-align: top;
+}
+
+.styled-table td.pubs {
+    padding: 5px 15px;
+     font-size: 16px;
+       font-weight: normal;
     color: #472060;
     vertical-align: top;
 }
