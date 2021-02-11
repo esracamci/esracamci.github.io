@@ -1,3 +1,26 @@
+@font-face {
+    font-family: 'Bondi';
+    src:url('webfonts_Bondi/Bondi.ttf.woff') format('woff'),
+        url('webfonts_Bondi/Bondi.ttf.svg#Bondi') format('svg'),
+        url('webfonts_Bondi/Bondi.ttf.eot'),
+        url('webfonts_Bondi/Bondi.ttf.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Fulbo-Retro';
+    src:url('webfonts_Fulbo-Retro/Fulbo-Retro.ttf.woff') format('woff'),
+        url('webfonts_Fulbo-Retro/Fulbo-Retro.ttf.svg#Fulbo-Retro') format('svg'),
+        url('webfonts_Fulbo-Retro/Fulbo-Retro.ttf.eot'),
+        url('webfonts_Fulbo-Retro/Fulbo-Retro.ttf.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+}
+
+
 body {
     margin: 50px 25px 25px 25px;
     padding: 0;
@@ -10,7 +33,7 @@ body {
 
    
 h1 { 
-    font-family: "Atomic Age", "Walter Turncoat", Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Bondi", "Fulbo-Retro",  "Walter Turncoat", "Atomic Age", Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 50px; 
     font-variant: normal; 
     font-weight: 450; 
@@ -72,9 +95,9 @@ h3 {
 }
 
 .topnav a {
-    font-family:  Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: 350;
-    font-size: 36px;
+    font-family:"Bondi", Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 100;
+    font-size: 30px;
     float: left;
     color: #fff;
     text-align: center;
@@ -98,13 +121,6 @@ h3 {
 .topnav-right {
   float: right;
 }
-
-
-
-
-
-
-
 
 
 
