@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2021-02-25T23:46:27-05:00</updated><id>/feed.xml</id><title type="html">Esra D. Camci</title><author><name>_esracamci</name><email>esracamci@gmail.com</email></author><entry><title type="html">Topics in statistics and experimental design</title><link href="/2021/02/25/statistics-and-experimental-design" rel="alternate" type="text/html" title="Topics in statistics and experimental design" /><published>2021-02-25T00:00:00-05:00</published><updated>2021-02-25T00:00:00-05:00</updated><id>/2021/02/25/statistics-and-experimental-design</id><content type="html" xml:base="/2021/02/25/statistics-and-experimental-design">&lt;p&gt;&lt;br /&gt;
+This is a list of statistical methods and thoughts on experimental design that I’d like to write up. I intend to work through examples in Jupyter notebook, using data from my own experiments. &lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+&lt;h4 id=&quot;cochlear-cultures-hair-cell-counts&quot;&gt;Cochlear cultures hair cell counts&lt;br /&gt;&lt;/h4&gt;
+&lt;p&gt;   - Experimental design and quantification&lt;br /&gt;
+   - Statistical power and power analysis&lt;br /&gt;
+   - Descriptive statistics&lt;br /&gt;
+   - Hypothesis testing&lt;br /&gt;
+   - Detection of outliers&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+&lt;h4 id=&quot;zebrafish-lateral-line-hair-cell-counts&quot;&gt;Zebrafish lateral line hair cell counts&lt;br /&gt;&lt;/h4&gt;
+&lt;p&gt;   - Experimental design and quantification &lt;br /&gt;
+   - Statistical power and power analysis&lt;br /&gt;
+   - Dose-response curve analysis&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+&lt;h4 id=&quot;hair-cell-imaging&quot;&gt;Hair cell imaging&lt;br /&gt;&lt;/h4&gt;
+&lt;p&gt;   - Labels and cell death&lt;br /&gt;
+   - Live imaging&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+&lt;h4 id=&quot;gene-expression-in-mouse-branchial-arch-tissue&quot;&gt;Gene expression in mouse branchial arch tissue&lt;br /&gt;&lt;/h4&gt;
+&lt;p&gt;   - Statistical power and power analysis&lt;br /&gt;
+   - Hypothesis testing&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+&lt;h4 id=&quot;landmark-based-morphometrics&quot;&gt;Landmark-based morphometrics&lt;br /&gt;&lt;/h4&gt;
+&lt;p&gt;   - Statistical power and power analysis&lt;br /&gt;
+   - PCA &lt;br /&gt;&lt;/p&gt;</content><author><name>_esracamci</name><email>esracamci@gmail.com</email></author><category term="jekyll" /><category term="coding" /><summary type="html">This is a list of statistical methods and thoughts on experimental design that I’d like to write up. I intend to work through examples in Jupyter notebook, using data from my own experiments. Cochlear cultures hair cell counts    - Experimental design and quantification    - Statistical power and power analysis    - Descriptive statistics    - Hypothesis testing    - Detection of outliers Zebrafish lateral line hair cell counts    - Experimental design and quantification    - Statistical power and power analysis    - Dose-response curve analysis Hair cell imaging    - Labels and cell death    - Live imaging Gene expression in mouse branchial arch tissue    - Statistical power and power analysis    - Hypothesis testing Landmark-based morphometrics    - Statistical power and power analysis    - PCA</summary></entry></feed>
