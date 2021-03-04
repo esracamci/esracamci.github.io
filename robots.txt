@@ -1,1 +1,1 @@
-Sitemap: /sitemap.xml
+Sitemap: esracamci.github.io/sitemap.xml
