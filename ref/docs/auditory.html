@@ -25,19 +25,22 @@
 <link rel="icon" type="image/png" href="/ref/assets/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/ref/assets/favicons/android-192x192.png"sizes="192x192">
 
-<title>Quiz</title>
-<meta property="og:title" content="Quiz" />
-<meta property="og:description" content="How to add interactive quizzes to your site." />
+<title>Auditory</title>
+<meta property="og:title" content="Auditory" />
+<meta property="og:description" content="Mouse Cranioskeletal Reference Atlas
+" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://localhost:4000" />
 <meta property="og:site_name" content="http://localhost:4000" />
 
-<meta itemprop="name" content="Quiz">
-<meta itemprop="description" content="How to add interactive quizzes to your site.">
+<meta itemprop="name" content="Auditory">
+<meta itemprop="description" content="Mouse Cranioskeletal Reference Atlas
+">
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Quiz"/>
-<meta name="twitter:description" content="How to add interactive quizzes to your site."/>
+<meta name="twitter:title" content="Auditory"/>
+<meta name="twitter:description" content="Mouse Cranioskeletal Reference Atlas
+"/>
 
 <link rel="stylesheet" href="/ref/assets/css/main.css">
 <link rel="stylesheet" href="/ref/assets/css/palette.css">
@@ -104,6 +107,9 @@
             <a href="/ref/docs/auditory" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">Auditory</a>
           </li>
           
+          <ul><li class="collapse show" id="">
+              <a class="td-sidebar-link td-sidebar-link__page " id="m-cranioref-auditory-external-ear" href="/ref/docs/auditory#external-ear">External ear</a><a class="td-sidebar-link td-sidebar-link__page " id="m-cranioref-auditory-ossicles" href="/ref/docs/auditory#ossicles">Ossicles</a><a class="td-sidebar-link td-sidebar-link__page " id="m-cranioref-auditory-innervation" href="/ref/docs/auditory#innervation">Innervation</a>
+              </li></ul>
     </ul>
   </nav>
 </div>
@@ -128,88 +134,59 @@
                   <a href="http://localhost:4000/ref/docs/">Documentation</a>
                 </li>
                 
-                <li class="breadcrumb-item">
-                  <a href="http://localhost:4000/ref/docs/extras/">Extras</a>
-                </li>
-                
                 <li class="breadcrumb-item active" aria-current="page">
-	          <a href="http://localhost:4000/ref/docs/extras/example-quiz">Quiz</a>
+	          <a href="http://localhost:4000/ref/docs/auditory">Auditory</a>
                 </li>
                 
 	      </ol>
            </nav>
            <div class="td-content">
-	      <h1 id="quizzes">Quizzes</h1>
-
-<p>As of version 0.0.12, docsy-jekyll has support for basic quizzes! These are
-intended to help educate your users about the content of your documentation.
-For a quiz, you can add a new file to the folder <code class="language-plaintext highlighter-rouge">_data/quizzes</code>, and write a 
-questions file based on the format shown in <code class="language-plaintext highlighter-rouge">_data/quizzes/example-quiz.yml</code>.
-Here is a simple example of a multiple choice question (which can also serve as 
-True/False):</p>
-
-<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">title</span><span class="pi">:</span> <span class="s">This is the Quiz Title</span>
-<span class="na">randomized</span><span class="pi">:</span> <span class="no">false</span>
-<span class="na">questions</span><span class="pi">:</span>
-
- <span class="pi">-</span> <span class="na">type</span><span class="pi">:</span> <span class="s2">"</span><span class="s">multiple-choice"</span>
-   <span class="na">question</span><span class="pi">:</span> <span class="s2">"</span><span class="s">True</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">False,</span><span class="nv"> </span><span class="s">Pittsburgh</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">West</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">Philadelphia"</span>
-   <span class="na">items</span><span class="pi">:</span>
-    <span class="pi">-</span> <span class="na">choice</span><span class="pi">:</span> <span class="s">True</span>
-      <span class="na">correct</span><span class="pi">:</span> <span class="no">true</span>
-    <span class="pi">-</span> <span class="na">choice</span><span class="pi">:</span> <span class="s">False</span>
-      <span class="na">correct</span><span class="pi">:</span> <span class="no">false</span>
-   <span class="na">followup</span><span class="pi">:</span> <span class="pi">|</span> 
-      <span class="s">The answer is True! Pittsburgh is 304.9 miles West of </span>
-      <span class="s">Philadelphia, or approximately a car ride of </span>
-      <span class="s">4 hours and 52 minutes. Buckle up!</span>
-</code></pre></div></div>
-
-<p>The quiz is rendered with a “Show Answer” button below each question, and when
-the user clicks it, any questions that are flagged with <code class="language-plaintext highlighter-rouge">correct: true</code> will be 
-bolded, and if a followup section is included, it will be displayed.
-See the live example at the end of this page.</p>
-
-<h2 id="options">Options</h2>
-
-<h4 id="title">Title</h4>
-
-<p>If you include a title, it will be rendered at the top of the quiz. This is
-optional - you can leave it out and add it before the include on the page.</p>
-
-<h4 id="random">Random</h4>
-
-<p>If you want your questions to be presented randomly, just add randomized: true
-to the data.</p>
-
-<h2 id="example-quiz">Example Quiz</h2>
-
-<p>If I want to include the quiz located at <code class="language-plaintext highlighter-rouge">_data/quizzes/example-quiz.yml</code>, I 
-can do so like this:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{% include quiz.html file='example-quiz' %}
-</code></pre></div></div>
-
-<p>The rendered quiz is shown here:</p>
-
-<h2>This is the Quiz Title</h2>
-<div class="admonition question">
-  <p class="admonition-title">What is your favorite color?</p>
-  <p>1. Red<br />2. Blue<br />3. Green<br /></p>
+	      <h2 id="external-ear">External ear</h2>
+<div class="w3-row">
+  <div class="w3-container w3-cell">
+    <p><img src="images/auditory/camci_auditory_external.jpg" style="width:500px" /></p>
+  </div>
 </div>
-<p><button class="btn btn-success" onclick="$(&quot;.correct-1&quot;).css(&quot;font-weight&quot;, 600);$(&quot;.correct-more-1&quot;).css(&quot;display&quot;, &quot;inline&quot;)">Show Answer</button></p>
-<p class="well correct-more-1" style="display:none">There is no correct answer to asking your favorite color! All choices would be good.</p>
-<p><br /></p>
-<div class="admonition question">
-  <p class="admonition-title">True or False, Pittsburgh is West of Philadelphia</p>
-  <p><span class="correct-2">1. true</span><br />2. false<br /></p>
-</div>
-<p><button class="btn btn-success" onclick="$(&quot;.correct-2&quot;).css(&quot;font-weight&quot;, 600);$(&quot;.correct-more-2&quot;).css(&quot;display&quot;, &quot;inline&quot;)">Show Answer</button></p>
-<p class="well correct-more-2" style="display:none">The answer is True! Pittsburgh is 304.9 miles West of Philadelphia, or approximately 
-a car ride of 4 hours and 52 minutes. Buckle up!
-</p>
-<p><br /></p>
+<p><br />
+<!--desktop and mobile key --></p>
+<div class="w3-container w3-cell" style="vertical-align:bottom; font-size:80%; width:100%">
+  <p>Originally published in Cox, et al. 2014<br /></p>
 
+  <p>Cox TC, Camci ED,Vora SR, Luquetti DV, and Turner EE. The genetics of auricular development and malformation: New findings in model systems driving future directions for microtia research. Eur J Med Genet 2014;57.</p>
+</div>
+
+<h2 id="ossicles">Ossicles</h2>
+<div class="w3-row">
+
+  <div class="w3-container w3-cell w3-mobile" style="width:25%">
+    <p><img src="images/auditory/camci_auditory_tympanic-ossicles.jpg" style="width:100%" /></p>
+  </div>
+  <!--desktop and mobile key -->
+  <div class="w3-container w3-cell w3-mobile" style="vertical-align:top; font-size:80%; width:75%">
+    <p>Pseudosections through a disarticulated tympanic bulla, showing the position of the ossicles, including the footplate of stapes.<br />
+<br /></p>
+    <p align="center"><b>Key</b></p>
+    <p>Yellow, incus<br /> Blue, malleus<br /> Red, stapes<br /> Purple, inner ear&lt;/div&gt;</p>
+
+  </div>
+
+  <h2 id="innervation">Innervation</h2>
+  <div class="w3-row">
+
+    <div class="w3-container w3-cell w3-mobile" style="width:50%">
+      <p><img src="images/auditory/camci_auditory_IAM-arcuate.jpg" style="width:100%" /></p>
+    </div>
+    <!--desktop and mobile key -->
+    <div class="w3-container w3-cell w3-mobile" style="vertical-align:top; font-size:80%; width:50%">
+      <p>Rendering showing the endocranial surface of the tympanic bulla, with labels indicating the location of the arcuate eminence and the opening for the internal acoustic meatus.<br /></p>
+
+      <p>The arcuate eminence is directly over the superior semicircular canal.<br /></p>
+
+      <p>The cranial nerves VIII (vestibulocochlear) and VII (facial), as well as the labyrinthine branch of the cerebellar artery are transmitted through the internal acoustic meatus.</p>
+
+    </div>
+  </div>
+</div>
 
 <script
   src="/ref/assets/js/jquery-3.3.1/jquery-3.3.1.min.js"
@@ -261,7 +238,7 @@ $.each(headers, function(i, header){
 </script>
 
 <script>
-$('h1').first().append('<div></div>')</script>
+$('h1').first().append('<div><span style="font-size:12px" class="badge badge-primary"><a style="cursor:pointer; color:white" href="http://localhost:4000/ref/tags#anatomy ">anatomy</a></span><span style="font-size:12px" class="badge badge-primary"><a style="cursor:pointer; color:white" href="http://localhost:4000/ref/tags#bone ">bone</a></span></div>')</script>
 
 	
               
