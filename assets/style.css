@@ -67,6 +67,10 @@ div.colophon {
   position: absolute;
 }
 
+#mapid {
+  height: 180px;
+}
+
 div.w3-container {
   font-size: 14px;
   padding-bottom: 5px;
