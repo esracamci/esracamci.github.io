@@ -106,19 +106,14 @@
           <article class="page">
   <div class="entry">
     <head>
-<style>
-	table {
- 	  border: 0px;
-	  border-color: fff;
-	}
-</style>
+
 </head>
 
-<div style="margin:30px">
+<div style="margin:15px">
 
 
 <p><h3>evenSplit</h3></p>
-A tool to recompose and evenly split currency acquired in-game. 
+A tool for evenly splitting in-game treasure. 
 <br />
 <div class="w3-cell-row">
 
@@ -126,22 +121,22 @@ A tool to recompose and evenly split currency acquired in-game.
 <form id="form" onsubmit="return false;">
    <br />
 <table style="width:340px">
-<tr style="border: 0px"><td style="border: 0px">&nbsp; Platinum</td>
-	<td style="border: 0px"><input type="text" size="3" id="userInput" /></td>
-	<td style="font-size:0.7rem; text-align:right; width:120px; border: 0px"> equals  &nbsp; <span id="ptCOP"></span> Cu </td></tr>
-<tr style="border: 0px"><td style="border: 0px">&nbsp; Gold</td>
-	<td style="border: 0px"><input type="text" size="3" id="gold" /></td>
-	<td style="font-size:0.7rem; text-align:right; width:120px; border: 0px"> <span id="gtCOP"></span> Cu </td></tr>
-<tr style="border: 0px"><td style="border: 0px">&nbsp; Electrum</td>
-	<td style="border: 0px"><input type="text" size="3" id="elect" /></td>
-	<td style="font-size:0.7rem; text-align:right; width:120px; border: 0px"> <span id="etCOP"></span> Cu </td></tr>
-<tr style="border: 0px"><td style="border: 0px">&nbsp; Silver</td>
-	<td style="border: 0px"><input type="text" size="3" id="silv" /></td>
-	<td style="font-size:0.7rem; text-align:right; width:120px; border: 0px"> <span id="stCOP"></span> Cu </td></tr>
-<tr style="border: 0px"><td style="border: 0px">&nbsp; Copper</td>
-	<td style="border: 0px"><input type="text" size="3" id="cop" /></td>
-	<td style="font-size:0.7rem; text-align:right; width:120px; border: 0px"> <span id="ctCOP"></span> Cu </td></tr>
-<tr style="border: 0px"><td colspan="3" style="border: 0px">
+<tr><td>&nbsp; Platinum</td>
+	<td><input type="text" size="3" id="userInput" /> <span style="font-size:0.7rem;"> &nbsp; &nbsp; equals</span></td>
+	<td style="font-size:0.7rem; text-align:right; width:60px">  &nbsp; <span id="ptCOP"></span> Cu </td></tr>
+<tr><td>&nbsp; Gold</td>
+	<td><input type="text" size="3" id="gold" /></td>
+	<td style="font-size:0.7rem; text-align:right; width:60px"> <span id="gtCOP"></span> Cu </td></tr>
+<tr><td>&nbsp; Electrum</td>
+	<td><input type="text" size="3" id="elect" /></td>
+	<td style="font-size:0.7rem; text-align:right; width:60px"> <span id="etCOP"></span> Cu </td></tr>
+<tr><td>&nbsp; Silver</td>
+	<td><input type="text" size="3" id="silv" /></td>
+	<td style="font-size:0.7rem; text-align:right; width:60px"> <span id="stCOP"></span> Cu </td></tr>
+<tr><td>&nbsp; Copper</td>
+	<td><input type="text" size="3" id="cop" /></td>
+	<td style="font-size:0.7rem; text-align:right; width:60px"> <span id="ctCOP"></span> Cu </td></tr>
+<tr><td colspan="3">
  <p align="right"><b> # of party members:</b> <input type="text" size="3" id="members" /></p>
 </td></tr>
 </table>
@@ -150,13 +145,12 @@ A tool to recompose and evenly split currency acquired in-game.
 </form>
 
 </div>
-
+<br />
 
 <div class="w3-container w3-cell w3-mobile" style="font size:0.8rem">
-<table style="width:350px"><tr><td>Sum total of 
-<span id="cSUM" style="font-weight:700"></span> copper, or:</td></tr>
+<table style="width:350px"><tr><td style="border-width:2px; border-color:grey">Sum total: <span id="cSUM" style="font-weight:700"></span> copper, or:</td></tr>
 <br />
- <tr><td style="border: 0px"> &nbsp; &nbsp; &nbsp; Pt<sub>t</sub>: <span id="backPlat2"></span><br />
+ <tr><td> &nbsp; &nbsp; &nbsp; Pt<sub>t</sub>: <span id="backPlat2"></span><br />
    &nbsp; &nbsp; &nbsp; Au<sub>t</sub>: <span id="backGold2"></span><br />
     &nbsp; &nbsp; &nbsp; Ag<sub>t</sub>: <span id="backSilver2"></span><br />
     &nbsp; &nbsp; &nbsp; Cu<sub>t</sub>: <span id="backCopper2"></span>  &nbsp; &nbsp; (total)<br />
@@ -165,12 +159,10 @@ A tool to recompose and evenly split currency acquired in-game.
 
 <br />
 
-<table><br />
-</table>
 <table style="width:350px">
-<tr><td>Splits evenly into
+<tr><td style="border-width:2px; border-color:grey">Splits evenly into
 <span id="membersDisp" style="font-weight:700"></span> shares of <span id="share" style="font-weight:700"></span> copper, or:<br /></td></tr> 
- <tr><td style="border: 0px"> &nbsp; &nbsp; &nbsp; Pt<sub>i</sub>: <span id="backPlat2i"></span><br />
+ <tr><td> &nbsp; &nbsp; &nbsp; Pt<sub>i</sub>: <span id="backPlat2i"></span><br />
    &nbsp; &nbsp; &nbsp; Au<sub>i</sub>: <span id="backGold2i"></span><br />
     &nbsp; &nbsp; &nbsp; Ag<sub>i</sub>: <span id="backSilver2i"></span><br />
     &nbsp; &nbsp; &nbsp; Cu<sub>i</sub>: <span id="backCopper2i"></span> &nbsp; &nbsp; (/party member)<br /></td></tr> </table>
@@ -178,13 +170,13 @@ A tool to recompose and evenly split currency acquired in-game.
 </div>
 <br /><br />
 <span style="font-size:0.7rem">
-Assumptions: currency weight is untracked, currency conversion occurs on demand.
+Assumptions: conversion on demand, not tracking currency weight.
 
-<br /><br />
+<br /><br /><br /><br />
 
 <center>
 <table style="width:325px; font-size:0.7rem">
-<tr><td colspan="6" style="font-size:0.7rem; text-align:center">
+<tr><td colspan="6" style="font-size:0.7rem; text-align:center; border-style:solid; border-width:1px;  border-color:grey; font-color:grey">
  <p align="center">Standard Exchange Rates, <a href="https://dnd5e.info/equipment/currency/">Dnd5e</a></p>
 </td></tr>
 <tr><td> </td> <td>Pt</td> <td>Au</td> <td>Elect.</td> <td>Ag</td> <td>Cu</td>
