@@ -61,13 +61,10 @@ table {
 /**************/
 /* BASE RULES */
 /**************/
-.colophon {
-  bottom: 0;
-  width: 100%;
-  bottom: 75px;
-  Text-align: left;
-  font-size: 12px;
-  Padding-right: 45px;
+div.colophon {
+  bottom: 100px;
+  font-size: 0.75REM;
+  position: absolute;
 }
 
 div.w3-container {
