@@ -46,6 +46,14 @@
 
 
 
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   crossorigin=""/>
+ <!-- Make sure you put this AFTER Leaflet's CSS -->
+ <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script>
+
     <link rel="stylesheet" type="text/css" href="/assets/style.css" />
     <link rel="alternate" type="application/rss+xml" title="Esra Camci - " href="/feed.xml" />
     <link rel="canonical" href="esracamci.github.io/projects/evenSplit" />
@@ -117,67 +125,75 @@ A tool for evenly splitting in-game treasure.
 <br />
 <div class="w3-cell-row">
 
-<div class="w3-container w3-cell w3-mobile" style="width:400px">
+<div class="w3-container w3-cell w3-mobile" style="width:425px">
 <form id="form" onsubmit="return false;">
    <br />
-<table style="width:350px">
-<tr><td>&nbsp; Platinum</td>
-	<td><input type="text" size="3" id="userInput" /> <span style="font-size:0.7rem;"> &nbsp; &nbsp; equals</span></td>
-	<td style="font-size:0.7rem; text-align:right; width:60px">  &nbsp; <span id="ptCOP"></span> Cu </td></tr>
-<tr><td>&nbsp; Gold</td>
-	<td><input type="text" size="3" id="gold" /></td>
-	<td style="font-size:0.7rem; text-align:right; width:60px"> <span id="gtCOP"></span> Cu </td></tr>
-<tr><td>&nbsp; Electrum</td>
-	<td><input type="text" size="3" id="elect" /></td>
-	<td style="font-size:0.7rem; text-align:right; width:60px"> <span id="etCOP"></span> Cu </td></tr>
-<tr><td>&nbsp; Silver</td>
-	<td><input type="text" size="3" id="silv" /></td>
-	<td style="font-size:0.7rem; text-align:right; width:60px"> <span id="stCOP"></span> Cu </td></tr>
-<tr><td>&nbsp; Copper</td>
-	<td><input type="text" size="3" id="cop" /></td>
-	<td style="font-size:0.7rem; text-align:right; width:60px"> <span id="ctCOP"></span> Cu </td></tr>
+<table style="width:425px">
+<tr><td style="width:85px">&nbsp; Platinum</td>
+	<td style="width:100px"><input type="text" size="3" id="userInput" /> <span style="font-size:0.7rem;"> &nbsp;equals</span></td>
+	<td style="font-size:0.7rem; text-align:right; width:100px">  &nbsp; <span id="ptCOP"> </span> Cu</td></tr>
+<tr><td style="width:85px">&nbsp; Gold</td>
+	<td style="width:120px"><input type="text" size="3" id="gold" /></td>
+	<td style="font-size:0.7rem; text-align:right; width:100px"> <span id="gtCOP"></span> Cu </td></tr>
+<tr><td style="width:85px">&nbsp; Electrum</td>
+	<td style="width:120px"><input type="text" size="3" id="elect" /></td>
+	<td style="font-size:0.7rem; text-align:right; width:100px"> <span id="etCOP"></span> Cu </td></tr>
+<tr><td style="width:85px">&nbsp; Silver</td>
+	<td style="width:120px"><input type="text" size="3" id="silv" /></td>
+	<td style="font-size:0.7rem; text-align:right; width:100px"> <span id="stCOP"></span> Cu </td></tr>
+<tr><td style="width:85px">&nbsp; Copper</td>
+	<td style="width:120px"><input type="text" size="3" id="cop" /></td>
+	<td style="font-size:0.7rem; text-align:right; width:100px"> <span id="ctCOP"></span> Cu </td></tr>
 <tr><td colspan="3">
- <p align="right"><b> # of party members:</b> <input type="text" size="3" id="members" /></p>
+ <p align="right"><b> number of party members:</b> <input type="text" size="2" id="members" placeholder="  n" /></p>
 </td></tr>
 </table>
 <br />
-       <input type="submit" onclick="othername();" />
+       <p align="center"><input type="submit" value="divvy up" onclick="othername();" /></p>
 </form>
 
 </div>
 <br />
-
+<br /><br /><br /><br />
 <div class="w3-container w3-cell w3-mobile" style="font size:0.8rem">
-<table style="width:350px"><tr><td style="border-width:2px; border-color:grey">Total: <span id="cSUM" style="font-weight:700"></span> copper, or:</td></tr>
-<br />
- <tr><td> &nbsp; &nbsp; &nbsp; Pt<sub>t</sub>: <span id="backPlat2"></span><br />
-   &nbsp; &nbsp; &nbsp; Au<sub>t</sub>: <span id="backGold2"></span><br />
-    &nbsp; &nbsp; &nbsp; Ag<sub>t</sub>: <span id="backSilver2"></span><br />
-    &nbsp; &nbsp; &nbsp; Cu<sub>t</sub>: <span id="backCopper2"></span>  &nbsp; &nbsp; (total)<br />
-</td></tr>
+<table style="width:425px"><tr><td style="border-width:2px; border-color:grey">Total: <span id="cSUM" style="font-weight:700">#<sub>T</sub></span> copper</td></tr>
 </table>
 
 <br />
 
-<table style="width:350px">
-<tr><td style="border-width:2px; border-color:grey">Splits evenly into
-<span id="membersDisp" style="font-weight:700"></span> shares of <span id="share" style="font-weight:700"></span> copper, or:<br /></td></tr> 
- <tr><td> &nbsp; &nbsp; &nbsp; Pt<sub>i</sub>: <span id="backPlat2i"></span><br />
-   &nbsp; &nbsp; &nbsp; Au<sub>i</sub>: <span id="backGold2i"></span><br />
-    &nbsp; &nbsp; &nbsp; Ag<sub>i</sub>: <span id="backSilver2i"></span><br />
-    &nbsp; &nbsp; &nbsp; Cu<sub>i</sub>: <span id="backCopper2i"></span> &nbsp; &nbsp; (/party member)<br /></td></tr> </table>
+<table style="width:425px">
+<tr><td colspan="2" style="border-width:2px; border-color:grey">Splits evenly into
+<span id="membersDisp" style="font-weight:700">n</span> shares of <span id="share" style="font-weight:700">#<sub>I</sub></span> copper, or:<br /></td></tr> 
+ <tr><td style="width:10px"> &nbsp; &nbsp; &nbsp; Platinum:</td><td style="width:25px"> <span id="backPlat2i"></span></td></tr> 
+    <tr><td style="width:10px"> &nbsp; &nbsp; &nbsp; Gold:</td><td style="width:25px"> <span id="backGold2i"></span></td></tr> 
+     <tr><td style="width:10px"> &nbsp; &nbsp; &nbsp; Silver:</td><td style="width:25px"> <span id="backSilver2i"></span></td></tr> 
+     <tr><td style="width:10px"> &nbsp; &nbsp; &nbsp; Copper:</td><td style="width:25px"> <span id="backCopper2i"></span>  /each</td></tr> </table>
 </div>
 </div>
 <br /><br />
 <span style="font-size:0.7rem">
-Assumptions: conversion on demand, not tracking currency weight.
+Assumptions: conversion on demand, not tracking currency weight, decimals.</span>
 
 <br /><br /><br /><br />
 
+
 <center>
-<table style="width:325px; font-size:0.7rem">
-<tr><td colspan="6" style="font-size:0.7rem; text-align:center; border-style:solid; border-width:1px;  border-color:grey; font-color:grey">
- <p align="center">Standard Exchange Rates, <a href="https://dnd5e.info/equipment/currency/">Dnd5e</a></p>
+<span style="font-size:0.7rem">
+<table style="width:400px">
+<tr><td colspan="2" style="border-width:2px; border-color:grey; width:325px">Total, by larger units</td></tr> 
+
+ <tr><td style="width:10px"> &nbsp; &nbsp; &nbsp; Platinum:</td><td style="width:25px"> <span id="backPlat2"> 
+&lt;/td&gt;&lt;/tr&gt; 
+    <tr><td style="width:10px"> &nbsp; &nbsp; &nbsp; Gold:</td><td style="width:25px"> <span id="backGold2"></span></td></tr> 
+     <tr><td style="width:10px"> &nbsp; &nbsp; &nbsp; Silver:</td><td style="width:25px"> <span id="backSilver2"></span></td></tr> 
+     <tr><td style="width:10px"> &nbsp; &nbsp; &nbsp; Copper:</td><td style="width:25px"> <span id="backCopper2"></span> 
+<br /><br /></td></tr> 
+&lt;/table&gt;
+
+
+
+<table style="width:400px; font-size:0.7rem">
+<tr><td colspan="6" style="border-width:2px; border-color:grey; width:325px"> <p align="center">Standard Exchange Rates, <a href="https://dnd5e.info/equipment/currency/">Dnd5e</a></p>
 </td></tr>
 <tr><td> </td> <td>Pt</td> <td>Au</td> <td>Elect.</td> <td>Ag</td> <td>Cu</td>
 </tr>
@@ -196,12 +212,6 @@ Assumptions: conversion on demand, not tracking currency weight.
 
 <tr><td>Platinum</td><td>1</td> <td>1/10</td> <td>1/20</td> <td>1/100</td> <td>1/1000</td>
 </tr>
-
-
-
-
-
-
 
 
 </table>
@@ -270,7 +280,7 @@ function othername() {
 }
 
 </script>
-</center></span></div>
+</span></td></tr></table></span></center></div>
 
   </div>
 </article>
