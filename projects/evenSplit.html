@@ -113,91 +113,84 @@
         <div id="main" role="main" class="container">
           <article class="page">
   <div class="entry">
-    <head>
-
-</head>
-
-<div style="margin:5px">
+    <div style="margin:15px">
 
 
 <p><h3>evenSplit</h3></p>
-A calculator for evenly splitting in-game treasure. 
-
-
+A tool for evenly splitting in-game treasure.
 <br /><br />
 <div class="w3-cell-row">
-<div class="w3-container w3-cell w3-mobile" style="width:300px">
-
-<table style="width:300px"><tr><td style="width:300px; border-width:3px; border-color:grey">
+<div class="w3-container w3-cell w3-mobile" style="width:320px">
+<table><tr><td style="border-width:1px; border-color:grey; width:320px">
 <form id="form" onsubmit="return false;">
 <table style="width:300px">
-<tr><td style="width:100px">&nbsp; Platinum</td>
-	<td style="width:75px"><input type="text" input="" pattern="[0-9]*" size="3" id="userInput" /> <span style="font-size:0.7rem;"></span></td>
+<tr><td style="width:100px">Platinum</td>
+	<td style="width:100px"><input type="text" size="3" id="userInput" /> <span style="font-size:0.7rem;"></span></td>
 	<td style="font-size:0.7rem; text-align:right; width:100px">  &nbsp; <span id="ptCOP"> </span> Cu</td></tr>
-<tr><td style="width:100px">&nbsp; Gold</td>
-	<td style="width:75px"><input type="text" input="" pattern="[0-9]*" size="3" id="gold" /></td>
+<tr><td style="width:100px">Gold</td>
+	<td style="width:100px"><input type="text" size="3" id="gold" /></td>
 	<td style="font-size:0.7rem; text-align:right; width:100px"> <span id="gtCOP"></span> Cu </td></tr>
-<tr><td style="width:100px">&nbsp; Electrum</td>
-	<td style="width:75px"><input type="text" input="" pattern="[0-9]*" size="3" id="elect" /></td>
+<tr><td style="width:100px">Electrum</td>
+	<td style="width:100px"><input type="text" size="3" id="elect" /></td>
 	<td style="font-size:0.7rem; text-align:right; width:100px"> <span id="etCOP"></span> Cu </td></tr>
-<tr><td style="width:100px">&nbsp; Silver</td>
-	<td style="width:75px"><input type="text" input="" pattern="[0-9]*" size="3" id="silv" /></td>
+<tr><td style="width:100px">Silver</td>
+	<td style="width:100px"><input type="text" size="3" id="silv" /></td>
 	<td style="font-size:0.7rem; text-align:right; width:100px"> <span id="stCOP"></span> Cu </td></tr>
-<tr><td style="width:100px">&nbsp; Copper</td>
-	<td style="width:75px"><input type="text" input="" pattern="[0-9]*" size="3" id="cop" /></td>
+<tr><td style="width:100px">Copper</td>
+	<td style="width:100px"><input type="text" size="3" id="cop" /></td>
 	<td style="font-size:0.7rem; text-align:right; width:100px"> <span id="ctCOP"></span> Cu </td></tr>
 <tr><td colspan="3">
- <p align="right"><b> number of party members:</b> <input type="text" input="" pattern="[0-9]*" size="2" id="members" placeholder=" n" /></p>
+ <p align="right"><b> number of party members:</b> <input type="text" size="2" id="members" placeholder="  n" /></p>
 </td></tr>
 </table>
+<br />
        <p align="center"><input type="submit" value="divvy up" onclick="othername();" /></p>
-</form></td></tr>
-</table>
+</form>
+</td></tr></table>
 </div>
 
 <div class="w3-container w3-cell w3-mobile w3-cell-bottom" style="font size:0.8rem">
 
-<table style="width:300px"><tr><td style="width:300px; border-width:3px; border-color:grey">
-<span style="font-size:0.8rem">
-<table style="width:300px"><tr><td style="border-width:2px; background-color:lightgrey">Total: <span id="cSUM" style="font-weight:700">#<sub>T</sub></span> copper</td></tr>
-</table></span>
+<span style="font-size:0.7rem">
+<table style="width:320px"><tr><td style="border-width:1px; border-color:grey; background-color:lightgrey">Total: <span id="cSUM" style="font-weight:700">#<sub>T</sub></span> copper</td></tr>
+</table>
 
 <br />
-<span style="font-size:0.8rem">
-<table style="width:300px">
-<tr><td colspan="2" style="border-width:2px; background-color:lightgrey">Splits evenly into
-<span id="membersDisp" style="font-weight:700">n</span> shares of <span id="share" style="font-weight:700">#<sub>I</sub></span> copper, or:<br /></td></tr> 
- <tr style="border-color:grey"><td style="width:10px"> &nbsp; &nbsp; &nbsp; Platinum:</td><td style="width:25px"> <span id="backPlat2i"></span></td></tr> 
+
+<table>
+<tr><td colspan="2" style="border-width:1px; border-color:grey; background-color:lightgrey">
+Splits evenly into <span id="membersDisp" style="font-weight:700">n</span> shares of <span id="share" style="font-weight:700">#<sub>I</sub></span> copper, or:<br /></td></tr> 
+ <tr><td style="width:10px"> &nbsp; &nbsp; &nbsp; Platinum:</td><td style="width:25px"> <span id="backPlat2i"></span></td></tr> 
     <tr><td style="width:10px"> &nbsp; &nbsp; &nbsp; Gold:</td><td style="width:25px"> <span id="backGold2i"></span></td></tr> 
      <tr><td style="width:10px"> &nbsp; &nbsp; &nbsp; Silver:</td><td style="width:25px"> <span id="backSilver2i"></span></td></tr> 
-     <tr><td style="width:10px"> &nbsp; &nbsp; &nbsp; Copper:</td><td style="width:25px"> <span id="backCopper2i"></span>  /each</td></tr> </table></span>
-</td></tr></table>
-</div>
+     <tr><td style="width:10px"> &nbsp; &nbsp; &nbsp; Copper:</td><td style="width:25px"> <span id="backCopper2i"></span></td></tr> 
+</table></span>
 </div>
 
-<span style="font-size:0.8rem">
-Assumptions: conversion on demand, not tracking currency weight, decimals.</span>
+</div>
+
 <br /><br />
+<span style="font-size:0.7rem">
+Assumptions: conversion on demand, not tracking currency weight, decimals.</span>
+
 
 
 <center>
-<!--
 <span style="font-size:0.7rem">
 <table style="width:300px">
 <tr><td colspan="2" style="border-width:2px; border-color:grey; width:325px">Total, by larger units</td></tr> 
 
  <tr><td style="width:10px"> &nbsp; &nbsp; &nbsp; Platinum:</td><td style="width:25px"> <span id="backPlat2"> 
-</td></tr> 
+&lt;/td&gt;&lt;/tr&gt; 
     <tr><td style="width:10px"> &nbsp; &nbsp; &nbsp; Gold:</td><td style="width:25px"> <span id="backGold2"></span></td></tr> 
      <tr><td style="width:10px"> &nbsp; &nbsp; &nbsp; Silver:</td><td style="width:25px"> <span id="backSilver2"></span></td></tr> 
      <tr><td style="width:10px"> &nbsp; &nbsp; &nbsp; Copper:</td><td style="width:25px"> <span id="backCopper2"></span> 
-<br><br></td></tr> 
-</table>
--->
+<br /><br /></td></tr> 
+&lt;/table&gt;
 
 
 
-<table style="width:350px; font-size:0.7rem">
+<table style="width:300px; font-size:0.7rem">
 <tr><td colspan="6" style="border-width:2px; border-color:grey; width:325px"> <p align="center">Standard Exchange Rates, <a href="https://dnd5e.info/equipment/currency/">Dnd5e</a></p>
 </td></tr>
 <tr><td> </td> <td>Pt</td> <td>Au</td> <td>Elect.</td> <td>Ag</td> <td>Cu</td>
@@ -285,7 +278,7 @@ function othername() {
 }
 
 </script>
-</center></div>
+</span></td></tr></table></span></center></div>
 
   </div>
 </article>
