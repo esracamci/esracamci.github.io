@@ -117,38 +117,35 @@
 
 </head>
 
-<div style="margin:15px">
+<div style="margin:5px">
 
 
 <p><h3>evenSplit</h3></p>
-A tool for evenly splitting in-game treasure. 
-<br />
+A calculator for evenly splitting treasure. 
 <div class="w3-cell-row">
-
-<div class="w3-container w3-cell w3-mobile" style="width:425px">
+<div class="w3-container w3-cell w3-mobile" style="width:300px">
+<br />
 <form id="form" onsubmit="return false;">
-   <br />
-<table style="width:425px">
-<tr><td style="width:85px">&nbsp; Platinum</td>
-	<td style="width:100px"><input type="text" size="3" id="userInput" /> <span style="font-size:0.7rem;"> &nbsp;equals</span></td>
+<table style="width:275px">
+<tr><td style="width:100px">&nbsp; Platinum</td>
+	<td style="width:75px"><input type="text" size="3" id="userInput" /> <span style="font-size:0.7rem;"></span></td>
 	<td style="font-size:0.7rem; text-align:right; width:100px">  &nbsp; <span id="ptCOP"> </span> Cu</td></tr>
-<tr><td style="width:85px">&nbsp; Gold</td>
-	<td style="width:120px"><input type="text" size="3" id="gold" /></td>
+<tr><td style="width:100px">&nbsp; Gold</td>
+	<td style="width:75px"><input type="text" size="3" id="gold" /></td>
 	<td style="font-size:0.7rem; text-align:right; width:100px"> <span id="gtCOP"></span> Cu </td></tr>
-<tr><td style="width:85px">&nbsp; Electrum</td>
-	<td style="width:120px"><input type="text" size="3" id="elect" /></td>
+<tr><td style="width:100px">&nbsp; Electrum</td>
+	<td style="width:75px"><input type="text" size="3" id="elect" /></td>
 	<td style="font-size:0.7rem; text-align:right; width:100px"> <span id="etCOP"></span> Cu </td></tr>
-<tr><td style="width:85px">&nbsp; Silver</td>
-	<td style="width:120px"><input type="text" size="3" id="silv" /></td>
+<tr><td style="width:100px">&nbsp; Silver</td>
+	<td style="width:75px"><input type="text" size="3" id="silv" /></td>
 	<td style="font-size:0.7rem; text-align:right; width:100px"> <span id="stCOP"></span> Cu </td></tr>
-<tr><td style="width:85px">&nbsp; Copper</td>
-	<td style="width:120px"><input type="text" size="3" id="cop" /></td>
+<tr><td style="width:100px">&nbsp; Copper</td>
+	<td style="width:75px"><input type="text" size="3" id="cop" /></td>
 	<td style="font-size:0.7rem; text-align:right; width:100px"> <span id="ctCOP"></span> Cu </td></tr>
 <tr><td colspan="3">
  <p align="right"><b> number of party members:</b> <input type="text" size="2" id="members" placeholder="  n" /></p>
 </td></tr>
 </table>
-<br />
        <p align="center"><input type="submit" value="divvy up" onclick="othername();" /></p>
 </form>
 
@@ -156,43 +153,45 @@ A tool for evenly splitting in-game treasure.
 <br />
 <br /><br /><br /><br />
 <div class="w3-container w3-cell w3-mobile" style="font size:0.8rem">
-<table style="width:425px"><tr><td style="border-width:2px; border-color:grey">Total: <span id="cSUM" style="font-weight:700">#<sub>T</sub></span> copper</td></tr>
-</table>
+<br /><span style="font-size:0.8rem">
+<table style="width:350px"><tr><td style="border-width:2px; border-color:grey">Total: <span id="cSUM" style="font-weight:700">#<sub>T</sub></span> copper</td></tr>
+</table></span>
 
 <br />
-
-<table style="width:425px">
+<span style="font-size:0.8rem">
+<table style="width:300px">
 <tr><td colspan="2" style="border-width:2px; border-color:grey">Splits evenly into
 <span id="membersDisp" style="font-weight:700">n</span> shares of <span id="share" style="font-weight:700">#<sub>I</sub></span> copper, or:<br /></td></tr> 
  <tr><td style="width:10px"> &nbsp; &nbsp; &nbsp; Platinum:</td><td style="width:25px"> <span id="backPlat2i"></span></td></tr> 
     <tr><td style="width:10px"> &nbsp; &nbsp; &nbsp; Gold:</td><td style="width:25px"> <span id="backGold2i"></span></td></tr> 
      <tr><td style="width:10px"> &nbsp; &nbsp; &nbsp; Silver:</td><td style="width:25px"> <span id="backSilver2i"></span></td></tr> 
-     <tr><td style="width:10px"> &nbsp; &nbsp; &nbsp; Copper:</td><td style="width:25px"> <span id="backCopper2i"></span>  /each</td></tr> </table>
+     <tr><td style="width:10px"> &nbsp; &nbsp; &nbsp; Copper:</td><td style="width:25px"> <span id="backCopper2i"></span>  /each</td></tr> </table></span>
 </div>
 </div>
-<br /><br />
-<span style="font-size:0.7rem">
-Assumptions: conversion on demand, not tracking currency weight, decimals.</span>
 
-<br /><br /><br /><br />
+<span style="font-size:0.8rem">
+Assumptions: conversion on demand, not tracking currency weight, decimals.</span>
+<br /><br />
 
 
 <center>
+<!--
 <span style="font-size:0.7rem">
-<table style="width:400px">
+<table style="width:300px">
 <tr><td colspan="2" style="border-width:2px; border-color:grey; width:325px">Total, by larger units</td></tr> 
 
  <tr><td style="width:10px"> &nbsp; &nbsp; &nbsp; Platinum:</td><td style="width:25px"> <span id="backPlat2"> 
-&lt;/td&gt;&lt;/tr&gt; 
+</td></tr> 
     <tr><td style="width:10px"> &nbsp; &nbsp; &nbsp; Gold:</td><td style="width:25px"> <span id="backGold2"></span></td></tr> 
      <tr><td style="width:10px"> &nbsp; &nbsp; &nbsp; Silver:</td><td style="width:25px"> <span id="backSilver2"></span></td></tr> 
      <tr><td style="width:10px"> &nbsp; &nbsp; &nbsp; Copper:</td><td style="width:25px"> <span id="backCopper2"></span> 
-<br /><br /></td></tr> 
-&lt;/table&gt;
+<br><br></td></tr> 
+</table>
+-->
 
 
 
-<table style="width:400px; font-size:0.7rem">
+<table style="width:350px; font-size:0.7rem">
 <tr><td colspan="6" style="border-width:2px; border-color:grey; width:325px"> <p align="center">Standard Exchange Rates, <a href="https://dnd5e.info/equipment/currency/">Dnd5e</a></p>
 </td></tr>
 <tr><td> </td> <td>Pt</td> <td>Au</td> <td>Elect.</td> <td>Ag</td> <td>Cu</td>
@@ -280,7 +279,7 @@ function othername() {
 }
 
 </script>
-</span></td></tr></table></span></center></div>
+</center></div>
 
   </div>
 </article>
