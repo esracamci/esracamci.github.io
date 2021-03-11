@@ -121,7 +121,7 @@
 
 
 <p><h3>evenSplit</h3></p>
-A calculator for evenly splitting treasure. 
+A calculator for evenly splitting in-game treasure. 
 <div class="w3-cell-row">
 <div class="w3-container w3-cell w3-mobile" style="width:300px">
 <br />
@@ -129,19 +129,19 @@ A calculator for evenly splitting treasure.
 <form id="form" onsubmit="return false;">
 <table style="width:275px">
 <tr><td style="width:100px">&nbsp; Platinum</td>
-	<td style="width:75px"><input type="text" size="3" id="userInput" /> <span style="font-size:0.7rem;"></span></td>
+	<td style="width:75px"><input type="text" input="" pattern="[0-9]*" size="3" id="userInput" /> <span style="font-size:0.7rem;"></span></td>
 	<td style="font-size:0.7rem; text-align:right; width:100px">  &nbsp; <span id="ptCOP"> </span> Cu</td></tr>
 <tr><td style="width:100px">&nbsp; Gold</td>
-	<td style="width:75px"><input type="text" size="3" id="gold" /></td>
+	<td style="width:75px"><input type="text" input="" pattern="[0-9]*" size="3" id="gold" /></td>
 	<td style="font-size:0.7rem; text-align:right; width:100px"> <span id="gtCOP"></span> Cu </td></tr>
 <tr><td style="width:100px">&nbsp; Electrum</td>
-	<td style="width:75px"><input type="text" size="3" id="elect" /></td>
+	<td style="width:75px"><input type="text" input="" pattern="[0-9]*" size="3" id="elect" /></td>
 	<td style="font-size:0.7rem; text-align:right; width:100px"> <span id="etCOP"></span> Cu </td></tr>
 <tr><td style="width:100px">&nbsp; Silver</td>
-	<td style="width:75px"><input type="text" size="3" id="silv" /></td>
+	<td style="width:75px"><input type="text" input="" pattern="[0-9]*" size="3" id="silv" /></td>
 	<td style="font-size:0.7rem; text-align:right; width:100px"> <span id="stCOP"></span> Cu </td></tr>
 <tr><td style="width:100px">&nbsp; Copper</td>
-	<td style="width:75px"><input type="text" size="3" id="cop" /></td>
+	<td style="width:75px"><input type="text" input="" pattern="[0-9]*" size="3" id="cop" /></td>
 	<td style="font-size:0.7rem; text-align:right; width:100px"> <span id="ctCOP"></span> Cu </td></tr>
 <tr><td colspan="3">
  <p align="right"><b> number of party members:</b> <input type="text" size="2" id="members" placeholder="  n" /></p>
@@ -152,7 +152,7 @@ A calculator for evenly splitting treasure.
 </table>
 </div>
 <br />
-<br /><br /><br /><br />
+<br /><br />
 <div class="w3-container w3-cell w3-mobile" style="font size:0.8rem">
 <br /><span style="font-size:0.8rem">
 <table style="width:350px"><tr><td style="border-width:2px; border-color:grey">Total: <span id="cSUM" style="font-weight:700">#<sub>T</sub></span> copper</td></tr>
