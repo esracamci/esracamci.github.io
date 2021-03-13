@@ -113,16 +113,14 @@
         <div id="main" role="main" class="container">
           <article class="page">
   <div class="entry">
-    <div style="margin:10px">
-
-
-<p><h3>evenSplit</h3></p>
-A tool for evenly splitting in-game treasure.
-<br /><br />
+    <div style="margin:15px">
+<h3>evenSplit</h3>
 <div class="w3-cell-row">
+<div class="w3-container w3-cell w3-mobile" style="width:300px">
+<table>
+<tr><td style="border-width:1px; border-color:grey; width:300px; background-color:lightgrey"><span style="font-size:0.7rem">A tool for evenly splitting in-game treasure.</span></td></tr>
 
-<div class="w3-container w3-cell w3-mobile" style="width:320px">
-<table><tr><td style="border-width:1px; border-color:grey; width:320px">
+<tr><td style="border-width:1px; border-color:grey; width:300px">
 <form id="form" onsubmit="return false;">
 <table style="width:300px">
 <tr><td style="width:100px">Platinum</td>
@@ -152,16 +150,16 @@ A tool for evenly splitting in-game treasure.
 
 <div class="w3-container w3-cell w3-mobile w3-cell-bottom" style="font size:0.8rem">
 
-<span style="font-size:0.85rem">
+<span style="font-size:0.7rem">
 
-<br />
-<table><tr><td style="background-color:lightgrey; width:320px">Total: <span id="cSUM" style="font-weight:700">#<sub>T</sub></span> copper</td></tr>
+
+<table><tr><td style="background-color:lightgrey; width:300px">Total: <span id="cSUM" style="font-weight:700">#<sub>T</sub></span> copper</td></tr>
 </table>
 
 <br />
 
 <table>
-<tr><td colspan="2" style="background-color:lightgrey;width:320px">
+<tr><td colspan="2" style="background-color:lightgrey;width:300px">
 Splits evenly into <span id="membersDisp" style="font-weight:700">n</span> shares of <span id="share" style="font-weight:700">#<sub>I</sub></span> copper, or:<br /></td></tr> 
  <tr><td style="width:10px"> &nbsp; &nbsp; &nbsp; Platinum:</td><td style="width:25px"> <span id="backPlat2i"></span></td></tr> 
     <tr><td style="width:10px"> &nbsp; &nbsp; &nbsp; Gold:</td><td style="width:25px"> <span id="backGold2i"></span></td></tr> 
@@ -171,42 +169,38 @@ Splits evenly into <span id="membersDisp" style="font-weight:700">n</span> share
 
 </span>
 </div>
+
 </div>
 
-
 <br /><br />
-
-<div class="w3-cell-row">
-
-<div class="w3-container w3-cell" style="">
-
 <span style="font-size:0.7rem">
-Assumptions: conversion on demand, not tracking weight, decimals.
+Assumptions: conversion on demand, not tracking currency weight, decimals.</span>
 
 
 <br /><br />
-
-<table style="margin-right:auto;margin-left:0px">
-<tr><td colspan="2" style="border-width:1px; border-color:grey"> Exchange Rate, <a href="https://dnd5e.info/equipment/currency/">dnd5e</a>
-
-
-<tr><td> </td> <td>Copper (piece)</td> 
+<table style="font-size:0.7rem">
+<tr><td colspan="6" style="border-width:1px; border-color:grey"> <p align="center">Exchange Rates, <a href="https://dnd5e.info/equipment/currency/">Dnd5e</a></p>
+</td></tr>
+<tr><td> </td><td>Copper</td>
 </tr>
 		
-<tr><td>Copper</td>  <td>1</td> 
+<tr><td>Copper</td> <td>1</td>
 </tr>
 
 <tr><td>Silver</td> <td>10</td>
 </tr>
 
-<tr><td>Electrum</td> <td>50</td> 
+<tr><td>Electrum</td> <td>50</td>
 </tr>
 
-<tr><td>Gold</td> <td>100</td> 
+<tr><td>Gold</td> <td>100</td>
 </tr>
 
-<tr><td>Platinum</td><td>1000</td> 
+<tr><td>Platinum</td><td>1000</td>
 </tr>
+
+
+</table>
 
 
 <script>
@@ -244,35 +238,35 @@ function othername() {
     
     var backPlat1 = cSUM/1000;
     var backPlat2 = Math.trunc(backPlat1);
-    document.getElementById('backPlat2').innerHTML = backPlat2;
+       <!-- document.getElementById('backPlat2').innerHTML = backPlat2;-->
     var backPlat1i = share/1000;
     var backPlat2i = Math.trunc(backPlat1i);
      document.getElementById('backPlat2i').innerHTML = backPlat2i;
 
     var backGold1 = 10*(backPlat1 - backPlat2);
     var backGold2 = Math.trunc(backGold1);
-    document.getElementById('backGold2').innerHTML = backGold2;
+       <!-- document.getElementById('backGold2').innerHTML = backGold2;-->
     var backGold1i = 10*(backPlat1i - backPlat2i);
     var backGold2i = Math.trunc(backGold1i);
     document.getElementById('backGold2i').innerHTML = backGold2i;
     
     var backSilver1 = 10*(backGold1 - backGold2);
 		var backSilver2 = Math.trunc(backSilver1);
-    document.getElementById('backSilver2').innerHTML = backSilver2;
+   <!-- document.getElementById('backSilver2').innerHTML = backSilver2;-->
     var backSilver1i = 10*(backGold1i - backGold2i);
 		var backSilver2i = Math.trunc(backSilver1i);
     document.getElementById('backSilver2i').innerHTML = backSilver2i;
     
     var backCopper1 = 10*(backSilver1 - backSilver2);
     var backCopper2 = backCopper1.toFixed(2);
-    document.getElementById('backCopper2').innerHTML = backCopper2;
+       <!-- document.getElementById('backCopper2').innerHTML = backCopper2;-->
     var backCopper1i = 10*(backSilver1i - backSilver2i);
     var backCopper2i = backCopper1i.toFixed(2);
     document.getElementById('backCopper2i').innerHTML = backCopper2i;
 }
 
 </script>
-</td></tr></table></span></div></div></div>
+</div>
 
   </div>
 </article>
