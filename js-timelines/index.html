@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>javascript timelines and blooming bulbs – Esra Camci</title>
+    <!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="javascript timelines and blooming bulbs" />
+<meta name="author" content="Esra Camci" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The daffodils, crocuses, and puschkinia I planted last fall have flowered, and I expect to see several more varieties bloom over the next few weeks. It seems like an opportunity to play around with visualizing data I don’t typically work with." />
+<meta property="og:description" content="The daffodils, crocuses, and puschkinia I planted last fall have flowered, and I expect to see several more varieties bloom over the next few weeks. It seems like an opportunity to play around with visualizing data I don’t typically work with." />
+<link rel="canonical" href="esracamci.github.io/js-timelines/" />
+<meta property="og:url" content="esracamci.github.io/js-timelines/" />
+<meta property="og:site_name" content="Esra Camci" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-04-02T00:00:00-04:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="javascript timelines and blooming bulbs" />
+<script type="application/ld+json">
+{"dateModified":"2021-04-02T00:00:00-04:00","datePublished":"2021-04-02T00:00:00-04:00","description":"The daffodils, crocuses, and puschkinia I planted last fall have flowered, and I expect to see several more varieties bloom over the next few weeks. It seems like an opportunity to play around with visualizing data I don’t typically work with.","mainEntityOfPage":{"@type":"WebPage","@id":"esracamci.github.io/js-timelines/"},"url":"esracamci.github.io/js-timelines/","author":{"@type":"Person","name":"Esra Camci"},"@type":"BlogPosting","headline":"javascript timelines and blooming bulbs","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+
+<meta property="og:description" content="The daffodils, crocuses, and puschkinia I planted last fall have flowered, and I expect to see several more varieties bloom over the next few weeks. It seems like an opportunity to play around with visualizing data I don’t typically work with.
+" />
+
+<meta name="author" content="Esra Camci" />
+
+
+<meta property="og:title" content="javascript timelines and blooming bulbs" />
+<meta property="twitter:title" content="javascript timelines and blooming bulbs" />
+
+
+
+<meta property="og:image" content="esracamci.github.io/images/e-profile.png"/>
+<meta property="twitter:image" content="esracamci.github.io/images/e-profile.png"/>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   crossorigin=""/>
+ <!-- Make sure you put this AFTER Leaflet's CSS -->
+ <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script>
+
+    <link rel="stylesheet" type="text/css" href="/assets/style.css" />
+    <link rel="alternate" type="application/rss+xml" title="Esra Camci - " href="/feed.xml" />
+    <link rel="canonical" href="esracamci.github.io/js-timelines/" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- ADDRESS BAR ICON -->
+    <meta name="theme-color" content="#000000">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+
+
+<!-- GOOGLE ANALYTICS -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FKQ5GBFZ4H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FKQ5GBFZ4H');
+</script>
+
+
+
+
+  </head>
+
+  <body>
+    <div id="bar"></div>
+    <div class="wrapper-container">
+      <div class="wrapper-masthead">
+        <div class="container">
+<div class="w3-animate-opacity">
+          <header class="masthead clearfix">
+
+
+<!-- PROFILE PICTURE THING -->
+            <a href="/" class="site-avatar"><img src="/images/e-profile.png" alt="" /></a>
+
+            <div class="site-info">
+              <h1 class="site-name"><a href="/">Esra Camci</a></h1>
+              <p class="site-description"></p>
+            </div>
+
+
+
+<!-- CHANGE NAVIGATION -->
+      <nav role="navigation">
+   
+      <a href="/CV/" >CV</a>
+   
+      <a href="/blog/" >Blog</a>
+   
+      <a href="/ref-frame/" >CranioRef</a>
+   
+      <a href="/projects/" >Projects</a>
+   
+
+</nav>
+
+          </header>
+        </div>
+</div>
+      </div>
+
+        <div class="wrapper-main">
+        <div id="main" role="main" class="container">
+          <article class="post detailed">
+  <h1>javascript timelines and blooming bulbs</h1>
+
+  <div>
+    <p class="author_title">Esra Camci  ·  April  2, 2021</p>
+    
+    <div class="post-tags">
+      
+      
+        <a href="/categories/#projects">projects</a>
+        &nbsp;
+      
+        <a href="/categories/#plants">plants</a>
+        &nbsp;
+      
+        <a href="/categories/#data viz">data viz</a>
+        
+      
+    </div>
+  </div>
+    
+  <div class="entry">
+    <p>The daffodils, crocuses, and puschkinia I planted last fall have flowered, and I expect to see several more varieties bloom over the next few weeks. It seems like an opportunity to play around with visualizing data I don’t typically work with.</p>
+
+<p>Here’s a javascript timeline of bulbs in my parent’s central Pennsylvania garden.</p>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<script type="text/javascript">
+  google.charts.load("current", {packages:["timeline"]});
+  google.charts.setOnLoadCallback(drawChart);
+  function drawChart() {
+
+    var container = document.getElementById('example5.1');
+    var chart = new google.visualization.Timeline(container);
+    var dataTable = new google.visualization.DataTable();
+    dataTable.addColumn({ type: 'string', id: 'Room' });
+    dataTable.addColumn({ type: 'string', id: 'Name' });
+    dataTable.addColumn({ type: 'date', id: 'Start' });
+    dataTable.addColumn({ type: 'date', id: 'End' });
+    dataTable.addRows([
+
+    // months are, for some reason, -1
+      [ 'Daffodil', 'Plant bulbs',       new Date(2020,10,1,0,0,0),  new Date(2020,10,1,0,0,0) ],
+            [ 'Daffodil', 'Bloom by deck',       new Date(2021,2,26,0,0,0),  new Date(2021,3,20,0,0,0) ],
+            [ 'Daffodil', 'Bloom by cherry tree',       new Date(2021,2,29,0,0,0),  new Date(2021,3,20,0,0,0) ],
+ //           [ 'Daffodil', 'Bloom by veggie patch',       new Date(2021,2,5,0,0,0),  new Date(2021,3,25,0,0,0) ],
+
+
+
+[ 'Iris',   'Plant bulbs',    new Date(2020,10,2,0,0,0), new Date(2020,10,2,0,0,0) ],
+//            [ 'Iris', 'Bloom by deck',       new Date(2021,4,29,0,0,0),  new Date(2021,5,20,0,0,0) ],
+ //           [ 'Iris', 'Bloom by cherry tree',       new Date(2021,4,29,0,0,0),  new Date(2021,5,20,0,0,0) ],
+ //           [ 'Iris', 'Bloom by veggie patch',       new Date(2021,4,29,0,0,0),  new Date(2021,5,20,0,0,0) ],
+
+[ 'Puschkinia',   'Plant bulbs',    new Date(2020,9,28,0,0,0), new Date(2020,9,28,0,0,0) ],
+            [ 'Puschkinia', 'Bloom by the rock garden',       new Date(2021,2,15,0,0,0),  new Date(2021,3,10,0,0,0) ],
+
+
+[ 'Chionodoxa',   'Plant bulbs',    new Date(2020,9,20,0,0,0), new Date(2020,9,20,0,0,0) ],
+
+[ 'Crocus',   'Plant bulbs',    new Date(2020,9,20,0,0,0), new Date(2020,9,20,0,0,0) ],
+[ 'Crocus',   'Bloom by the garage',    new Date(2021,2,29,0,0,0),  new Date(2021,3,2,0,0,0) ],
+[ 'Crocus',   'Bloom by the front door',    new Date(2021,2,29,0,0,0),  new Date(2021,3,2,0,0,0) ],
+
+[ 'Red Devon Daffodil',   'Plant bulbs',    new Date(2020,9,20,0,0,0), new Date(2020,9,20,0,0,0) ],
+['Oxford Elite Tulip',   'Plant bulbs',    new Date(2020,9,20,0,0,0), new Date(2020,9,20,0,0,0) ],
+
+['Dutch Iris',   'Plant bulbs',    new Date(2020,9,20,0,0,0), new Date(2020,9,20,0,0,0) ],
+
+      [ 'Tulip',   'Plant bulbs',    new Date(2020,9,15,0,0,0), new Date(2020,9,15,0,0,0) ],
+       //     [ 'Tulip', 'Bloom by oak tree',       new Date(2021,4,29,0,0,0),  new Date(2021,5,20,0,0,0)  ],
+
+      ]);
+
+    var options = {
+      timeline: { colorByRowLabel: true },
+      colors: ['FFCD00', '2F14F0', '4B87FF', 'A9AAFF', '7800FF', 'FFC100', 'F07814', '4614F0',  'FF4B6C'],
+       title: '2020-2021 Camci Garden Blooms',
+       is3D: true
+
+    };
+
+
+
+
+
+
+
+    chart.draw(dataTable, options);
+  }
+
+</script>
+
+<div id="example5.1" style="height: 800px;"></div>
+
+  </div>
+
+  <div>
+     </div>
+
+  <!--<div class="date">
+    Written on April  2, 2021
+  </div>-->
+</article>
+
+
+
+
+
+<span>[
+  
+    
+    <a href="/tag/projects"><code class="highligher-rouge"><nobr>projects</nobr></code>&nbsp;</a>
+  
+    
+    <a href="/tag/plants"><code class="highligher-rouge"><nobr>plants</nobr></code>&nbsp;</a>
+  
+]</span>
+        </div>
+      </div>
+
+      <div class="wrapper-footer">
+        <div class="container">
+<div class="footer">
+          <footer class="footer">
+          
+<div class="w3-container w3-cell w3-mobile">
+<a href="mailto:esracamci@gmail.com"><img src="/assets/images/envelope.png" width="18px" style="vertical-align:middle">&ensp; esracamci@gmail.com</a> </div>
+
+<div class="w3-container w3-cell w3-mobile">
+<a href="http://www.twitter.com/_esracamci"><img src="/assets/images/twitter.jpg" width="18px" style="vertical-align:middle">&ensp; Twitter</a> </div>
+
+<div class="w3-container w3-cell w3-mobile">
+<a href="https://orcid.org/0000-0001-6074-9556"><img src="/assets/images/ORCID.png" width="18px" style="vertical-align:middle">&ensp; ORCID</a></div>
+<div class="w3-container w3-cell w3-mobile">
+ <a href="https://www.researchgate.net/profile/Esra_Camci"><img src="/assets/images/researchgate.png" width="18px" style="vertical-align:middle">&ensp; ResearchGate</a> </div>
+<div class="w3-container w3-cell w3-mobile">
+<a href="https://www.linkedin.com/in/esra-camci/"><img src="/assets/images/linkedin.png" width="18px" style="vertical-align:middle">&ensp; LinkedIn</a></div>
+
+
+</div>
+
+          </footer>
+        </div>
+</div>
+      </div>
+    </div>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FKQ5GBFZ4H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FKQ5GBFZ4H');
+</script>
+  </body>
+</html>
