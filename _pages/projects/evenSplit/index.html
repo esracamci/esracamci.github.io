@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>evenSplit – Esra Camci</title>
+    <!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="evenSplit" />
+<meta name="author" content="Esra Camci" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="esracamci.github.io/_pages/projects/evenSplit/" />
+<meta property="og:url" content="esracamci.github.io/_pages/projects/evenSplit/" />
+<meta property="og:site_name" content="Esra Camci" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="evenSplit" />
+<script type="application/ld+json">
+{"url":"esracamci.github.io/_pages/projects/evenSplit/","author":{"@type":"Person","name":"Esra Camci"},"@type":"WebPage","headline":"evenSplit","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+
+<meta property="og:description" content="" />
+
+<meta name="author" content="Esra Camci" />
+
+
+<meta property="og:title" content="evenSplit" />
+<meta property="twitter:title" content="evenSplit" />
+
+
+
+<meta property="og:image" content="esracamci.github.io/images/e-profile.png"/>
+<meta property="twitter:image" content="esracamci.github.io/images/e-profile.png"/>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+<meta property="og:image" content="https://esracamci.github.io/images/e-profile.png" />
+
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   crossorigin=""/>
+ <!-- Make sure you put this AFTER Leaflet's CSS -->
+ <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script>
+
+    <link rel="stylesheet" type="text/css" href="/assets/style.css" />
+    <link rel="alternate" type="application/rss+xml" title="Esra Camci - " href="/feed.xml" />
+    <link rel="canonical" href="esracamci.github.io/_pages/projects/evenSplit/" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- ADDRESS BAR ICON -->
+    <meta name="theme-color" content="#000000">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+
+
+<!-- GOOGLE ANALYTICS -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FKQ5GBFZ4H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FKQ5GBFZ4H');
+</script>
+
+
+
+
+  </head>
+
+  <body>
+    <div id="bar"></div>
+    <div class="wrapper-container">
+      <div class="wrapper-masthead">
+        <div class="container">
+<div class="w3-animate-opacity">
+          <header class="masthead clearfix">
+
+
+<!-- PROFILE PICTURE THING -->
+            <a href="/" class="site-avatar"><img src="/images/e-profile.png" alt="" /></a>
+
+            <div class="site-info">
+              <h1 class="site-name"><a href="/">Esra Camci</a></h1>
+              <p class="site-description"></p>
+            </div>
+
+
+
+<!-- CHANGE NAVIGATION -->
+      <nav role="navigation">
+   
+      <a href="/index.html" >CV</a>
+   
+      <a href="/ref-frame/" >CranioRef</a>
+   
+
+</nav>
+
+          </header>
+        </div>
+</div>
+      </div>
+
+        <div class="wrapper-main">
+        <div id="main" role="main" class="container">
+          <article class="page">
+  <div class="entry">
+    <h3>evenSplit</h3>
+<div class="w3-cell-row">
+<div class="w3-container w3-cell w3-mobile" style="width:300px">
+<table>
+<tr><td style="border-width:1px; border-color:grey; width:300px; background-color:lightgrey"><span style="font-size:0.7rem">A tool for evenly splitting in-game treasure.</span></td></tr>
+
+<tr><td style="border-width:1px; border-color:grey; width:300px">
+<form id="form" onsubmit="return false;">
+<table style="width:300px">
+<tr><td style="width:100px">Platinum</td>
+	<td style="width:100px"><input inputmode="numeric" pattern="[0-9]*" type="text" size="3" id="userInput" /> <span style="font-size:0.7rem;"></span></td>
+	<td style="font-size:0.7rem; text-align:right; width:100px">  &nbsp; <span id="ptCOP"> </span> Cu</td></tr>
+<tr><td style="width:100px">Gold</td>
+	<td style="width:100px"><input inputmode="numeric" pattern="[0-9]*" type="text" size="3" id="gold" /></td>
+	<td style="font-size:0.7rem; text-align:right; width:100px"> <span id="gtCOP"></span> Cu </td></tr>
+<tr><td style="width:100px">Electrum</td>
+	<td style="width:100px"><input inputmode="numeric" pattern="[0-9]*" type="text" size="3" id="elect" /></td>
+	<td style="font-size:0.7rem; text-align:right; width:100px"> <span id="etCOP"></span> Cu </td></tr>
+<tr><td style="width:100px">Silver</td>
+	<td style="width:100px"><input inputmode="numeric" pattern="[0-9]*" type="text" size="3" id="silv" /></td>
+	<td style="font-size:0.7rem; text-align:right; width:100px"> <span id="stCOP"></span> Cu </td></tr>
+<tr><td style="width:100px">Copper</td>
+	<td style="width:100px"><input inputmode="numeric" pattern="[0-9]*" type="text" size="3" id="cop" /></td>
+	<td style="font-size:0.7rem; text-align:right; width:100px"> <span id="ctCOP"></span> Cu </td></tr>
+<tr><td colspan="3">
+ <p align="right"><b> number of party members:</b> <input inputmode="numeric" pattern="[0-9]*" type="text" size="2" id="members" placeholder=" n" /></p>
+</td></tr>
+</table>
+<br />
+       <p align="center"><input type="submit" value="divvy up" onclick="othername();" /></p>
+</form>
+</td></tr></table>
+</div>
+
+<div class="w3-container w3-cell w3-mobile w3-cell-bottom" style="font size:0.8rem">
+
+<span style="font-size:0.7rem">
+
+
+<table><tr><td style="background-color:lightgrey; width:300px">Total: <span id="cSUM" style="font-weight:700">#<sub>T</sub></span> copper</td></tr>
+</table>
+
+<br />
+
+<table>
+<tr><td colspan="2" style="background-color:lightgrey;width:300px">
+Splits evenly into <span id="membersDisp" style="font-weight:700">n</span> shares of <span id="share" style="font-weight:700">#<sub>I</sub></span> copper, or:<br /></td></tr> 
+ <tr><td style="width:10px"> &nbsp; &nbsp; &nbsp; Platinum:</td><td style="width:25px"> <span id="backPlat2i"></span></td></tr> 
+    <tr><td style="width:10px"> &nbsp; &nbsp; &nbsp; Gold:</td><td style="width:25px"> <span id="backGold2i"></span></td></tr> 
+     <tr><td style="width:10px"> &nbsp; &nbsp; &nbsp; Silver:</td><td style="width:25px"> <span id="backSilver2i"></span></td></tr> 
+     <tr><td style="width:10px"> &nbsp; &nbsp; &nbsp; Copper:</td><td style="width:25px"> <span id="backCopper2i"></span></td></tr> 
+</table>
+
+</span>
+</div>
+
+</div>
+
+<p><br /><br />
+<span style="font-size:0.7rem">
+Assumptions: conversion on demand, not tracking currency weight, decimals.</span></p>
+
+<p><br /><br /></p>
+<table style="font-size:0.7rem">
+<tr><td colspan="6" style="border-width:1px; border-color:grey"> <p align="center">Exchange Rates, <a href="https://dnd5e.info/equipment/currency/">Dnd5e</a></p>
+</td></tr>
+<tr><td> </td><td>Copper</td>
+</tr>
+		
+<tr><td>Copper</td> <td>1</td>
+</tr>
+
+<tr><td>Silver</td> <td>10</td>
+</tr>
+
+<tr><td>Electrum</td> <td>50</td>
+</tr>
+
+<tr><td>Gold</td> <td>100</td>
+</tr>
+
+<tr><td>Platinum</td><td>1000</td>
+</tr>
+
+
+</table>
+
+<script>
+
+function othername() {
+    var platIN = document.getElementById("userInput").value;
+    var ptCOP = platIN * 1000;
+    document.getElementById('ptCOP').innerHTML = ptCOP;
+    
+    var goldIN = document.getElementById("gold").value;
+    var gtCOP = goldIN * 100;
+    document.getElementById('gtCOP').innerHTML = gtCOP;
+    
+    var electIN = document.getElementById("elect").value;
+    var etCOP = electIN * 50;
+    document.getElementById('etCOP').innerHTML = etCOP;
+    
+    var silvIN = document.getElementById("silv").value;
+    var stCOP = silvIN * 10;
+    document.getElementById('stCOP').innerHTML = stCOP;
+    
+    var copIN = document.getElementById("cop").value;
+    var ctCOP = copIN * 1;
+    document.getElementById('ctCOP').innerHTML = ctCOP;
+    
+    var members = document.getElementById("members").value;
+    document.getElementById('membersDisp').innerHTML = members;  
+
+    var cSUM = ptCOP + gtCOP + etCOP + stCOP + ctCOP;
+    document.getElementById('cSUM').innerHTML = cSUM; 
+     
+    var share1 = cSUM/members;
+    var share = share1.toFixed(2);
+    document.getElementById('share').innerHTML = share;  
+    
+    var backPlat1 = cSUM/1000;
+    var backPlat2 = Math.trunc(backPlat1);
+       <!-- document.getElementById('backPlat2').innerHTML = backPlat2;-->
+    var backPlat1i = share/1000;
+    var backPlat2i = Math.trunc(backPlat1i);
+     document.getElementById('backPlat2i').innerHTML = backPlat2i;
+
+    var backGold1 = 10*(backPlat1 - backPlat2);
+    var backGold2 = Math.trunc(backGold1);
+       <!-- document.getElementById('backGold2').innerHTML = backGold2;-->
+    var backGold1i = 10*(backPlat1i - backPlat2i);
+    var backGold2i = Math.trunc(backGold1i);
+    document.getElementById('backGold2i').innerHTML = backGold2i;
+    
+    var backSilver1 = 10*(backGold1 - backGold2);
+		var backSilver2 = Math.trunc(backSilver1);
+   <!-- document.getElementById('backSilver2').innerHTML = backSilver2;-->
+    var backSilver1i = 10*(backGold1i - backGold2i);
+		var backSilver2i = Math.trunc(backSilver1i);
+    document.getElementById('backSilver2i').innerHTML = backSilver2i;
+    
+    var backCopper1 = 10*(backSilver1 - backSilver2);
+    var backCopper2 = backCopper1.toFixed(2);
+       <!-- document.getElementById('backCopper2').innerHTML = backCopper2;-->
+    var backCopper1i = 10*(backSilver1i - backSilver2i);
+    var backCopper2i = backCopper1i.toFixed(2);
+    document.getElementById('backCopper2i').innerHTML = backCopper2i;
+}
+
+</script>
+
+<p>&lt;/div&gt;</p>
+
+<p>&lt;/div&gt;</p>
+
+  </div>
+</article>
+
+        </div>
+      </div>
+
+      <div class="wrapper-footer">
+        <div class="container">
+<div class="footer">
+          <footer class="footer">
+          
+<div class="w3-container w3-cell w3-mobile">
+<a href="mailto:esracamci@gmail.com"><img src="/assets/images/envelope.png" width="18px" style="vertical-align:middle">&ensp; esracamci@gmail.com</a> </div>
+
+<div class="w3-container w3-cell w3-mobile">
+<a href="http://www.twitter.com/_esracamci"><img src="/assets/images/twitter.jpg" width="18px" style="vertical-align:middle">&ensp; Twitter</a> </div>
+
+<div class="w3-container w3-cell w3-mobile">
+<a href="https://orcid.org/0000-0001-6074-9556"><img src="/assets/images/ORCID.png" width="18px" style="vertical-align:middle">&ensp; ORCID</a></div>
+<div class="w3-container w3-cell w3-mobile">
+ <a href="https://www.researchgate.net/profile/Esra_Camci"><img src="/assets/images/researchgate.png" width="18px" style="vertical-align:middle">&ensp; ResearchGate</a> </div>
+<div class="w3-container w3-cell w3-mobile">
+<a href="https://www.linkedin.com/in/esra-camci/"><img src="/assets/images/linkedin.png" width="18px" style="vertical-align:middle">&ensp; LinkedIn</a></div>
+
+
+</div>
+
+          </footer>
+        </div>
+</div>
+      </div>
+    </div>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FKQ5GBFZ4H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FKQ5GBFZ4H');
+</script>
+  </body>
+</html>
