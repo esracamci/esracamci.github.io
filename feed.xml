@@ -1,1 +1,78 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="esracamci.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="esracamci.github.io/" rel="alternate" type="text/html" /><updated>2021-03-13T23:34:15-05:00</updated><id>esracamci.github.io/feed.xml</id><title type="html">Esra Camci</title><author><name>Esra Camci</name></author><entry><title type="html">Hello world</title><link href="esracamci.github.io/hello-world/" rel="alternate" type="text/html" title="Hello world" /><published>2021-03-04T00:00:00-05:00</published><updated>2021-03-04T00:00:00-05:00</updated><id>esracamci.github.io/hello-world</id><content type="html" xml:base="esracamci.github.io/hello-world/">&lt;p&gt;This is a placeholder.&lt;/p&gt;</content><author><name>Esra Camci</name></author><category term="HTML" /><category term="Code" /><category term="jekyll" /><category term="blog" /><category term="github-page" /><summary type="html">This is a placeholder.</summary></entry></feed>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="esracamci.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="esracamci.github.io/" rel="alternate" type="text/html" /><updated>2021-07-31T13:14:46-04:00</updated><id>esracamci.github.io/feed.xml</id><title type="html">Esra Camci</title><author><name>Esra Camci</name></author><entry><title type="html">bulb to bloom timeline</title><link href="esracamci.github.io/bulbs/" rel="alternate" type="text/html" title="bulb to bloom timeline" /><published>2021-04-02T00:00:00-04:00</published><updated>2021-04-02T00:00:00-04:00</updated><id>esracamci.github.io/bulbs</id><content type="html" xml:base="esracamci.github.io/bulbs/">&lt;p&gt;Central Pennsylvania, USDA zone 6b&lt;/p&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;https://www.gstatic.com/charts/loader.js&quot;&gt;&lt;/script&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+  google.charts.load(&quot;current&quot;, {packages:[&quot;timeline&quot;]});
+  google.charts.setOnLoadCallback(drawChart);
+  function drawChart() {
+
+    var container = document.getElementById(&apos;example5.1&apos;);
+    var chart = new google.visualization.Timeline(container);
+    var dataTable = new google.visualization.DataTable();
+    dataTable.addColumn({ type: &apos;string&apos;, id: &apos;Room&apos; });
+    dataTable.addColumn({ type: &apos;string&apos;, id: &apos;Name&apos; });
+    dataTable.addColumn({ type: &apos;date&apos;, id: &apos;Start&apos; });
+    dataTable.addColumn({ type: &apos;date&apos;, id: &apos;End&apos; });
+    dataTable.addRows([
+
+    // months are, for some reason, -1
+      [ &apos;Daffodil&apos;, &apos;Plant bulbs&apos;,       new Date(2020,10,1,0,0,0),  new Date(2020,10,1,0,0,0) ],
+            [ &apos;Daffodil&apos;, &apos;bloom by back deck&apos;,       new Date(2021,2,26,0,0,0),  new Date(2021,3,15,0,0,0) ],
+  [ &apos;Daffodil&apos;, &apos;by arbor day pine&apos;,       new Date(2021,2,27,0,0,0),  new Date(2021,3,19,0,0,0) ],
+            [ &apos;Daffodil&apos;, &apos;by weeping cherry&apos;,       new Date(2021,2,29,0,0,0),  new Date(2021,3,19,0,0,0) ],
+
+            [ &apos;Daffodil&apos;, &apos;in veggie patch W&apos;,       new Date(2021,3,5,0,0,0),  new Date(2021,3,19,0,0,0) ],
+
+
+
+[ &apos;Iris&apos;,   &apos;Plant bulbs&apos;,    new Date(2020,10,2,0,0,0), new Date(2020,10,2,0,0,0) ],
+//            [ &apos;Iris&apos;, &apos;bloom by deck&apos;,       new Date(2021,4,29,0,0,0),  new Date(2021,5,20,0,0,0) ],
+ //           [ &apos;Iris&apos;, &apos;by weeping cherry&apos;,       new Date(2021,4,29,0,0,0),  new Date(2021,5,20,0,0,0) ],
+ //           [ &apos;Iris&apos;, &apos;in veggie patch E&apos;,       new Date(2021,4,29,0,0,0),  new Date(2021,5,20,0,0,0) ],
+
+[ &apos;Puschkinia&apos;,   &apos;Plant bulbs&apos;,    new Date(2020,9,28,0,0,0), new Date(2020,9,28,0,0,0) ],
+            [ &apos;Puschkinia&apos;, &apos;bloom in rock garden&apos;,       new Date(2021,2,17,0,0,0),  new Date(2021,3,15,0,0,0) ],
+
+
+[ &apos;Chionodoxa&apos;,   &apos;Plant bulbs&apos;,    new Date(2020,9,20,0,0,0), new Date(2020,9,20,0,0,0) ],
+            [ &apos;Chionodoxa&apos;, &apos;bloom by garage W&apos;,       new Date(2021,3,3,0,0,0),  new Date(2021,3,17,0,0,0) ],
+            [ &apos;Chionodoxa&apos;, &apos;by garage E&apos;,       new Date(2021,3,7,0,0,0),  new Date(2021,3,19,0,0,0) ],
+
+[ &apos;Crocus&apos;,   &apos;Plant bulbs&apos;,    new Date(2020,9,20,0,0,0), new Date(2020,9,21,0,0,0) ],
+[ &apos;Crocus&apos;,   &apos;bloom by garage W&apos;,    new Date(2021,2,29,0,0,0),  new Date(2021,3,7,0,0,0) ],
+[ &apos;Crocus&apos;,   &apos;by garage E&apos;,    new Date(2021,2,29,0,0,0),  new Date(2021,3,7,0,0,0) ],
+
+[ &apos;Red Devon Daffodil&apos;,   &apos;Plant bulbs&apos;,    new Date(2020,9,20,0,0,0), new Date(2020,9,20,0,0,0) ],
+[ &apos;Red Devon Daffodil&apos;,   &apos;bloom by garage W&apos;,    new Date(2021,3,16,0,0,0),  new Date(2021,3,19,0,0,0) ],
+[ &apos;Red Devon Daffodil&apos;,   &apos;by garage E&apos;,    new Date(2021,3,17,0,0,0),  new Date(2021,3,19,0,0,0) ],
+
+[&apos;Oxford Elite Tulip&apos;,   &apos;Plant bulbs&apos;,    new Date(2020,9,20,0,0,0), new Date(2020,9,20,0,0,0) ],
+
+[&apos;Dutch Iris&apos;,   &apos;Plant bulbs&apos;,    new Date(2020,9,20,0,0,0), new Date(2020,9,20,0,0,0) ],
+
+      [ &apos;Tulip&apos;,   &apos;Plant bulbs&apos;,    new Date(2020,9,15,0,0,0), new Date(2020,9,15,0,0,0) ],
+            [ &apos;Tulip&apos;, &apos;Bloom by oak tree&apos;,       new Date(2021,3,18,0,0,0),  new Date(2021,3,19,0,0,0)  ],
+
+      ]);
+
+    var options = {
+      timeline: { colorByRowLabel: true },
+      colors: [&apos;FFCD00&apos;, &apos;2F14F0&apos;, &apos;4B87FF&apos;, &apos;A9AAFF&apos;, &apos;7800FF&apos;, &apos;FFC100&apos;, &apos;F07814&apos;, &apos;4614F0&apos;,  &apos;FF4B6C&apos;],
+       title: &apos;2020-2021 Camci Garden Blooms&apos;,
+       is3D: true
+
+    };
+
+
+
+
+
+
+
+    chart.draw(dataTable, options);
+  }
+
+&lt;/script&gt;
+
+&lt;div id=&quot;example5.1&quot; style=&quot;height: 800px;&quot;&gt;&lt;/div&gt;</content><author><name>Esra Camci</name></author><category term="data-viz" /><category term="plants" /><summary type="html">Central Pennsylvania, USDA zone 6b</summary></entry><entry><title type="html">Hello world</title><link href="esracamci.github.io/hello-world/" rel="alternate" type="text/html" title="Hello world" /><published>2021-03-04T00:00:00-05:00</published><updated>2021-03-04T00:00:00-05:00</updated><id>esracamci.github.io/hello-world</id><content type="html" xml:base="esracamci.github.io/hello-world/">&lt;p&gt;This is a placeholder.&lt;/p&gt;</content><author><name>Esra Camci</name></author><category term="HTML" /><category term="Code" /><category term="jekyll" /><category term="blog" /><category term="github-page" /><summary type="html">This is a placeholder.</summary></entry></feed>

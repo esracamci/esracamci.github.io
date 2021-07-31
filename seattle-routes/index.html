@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Seattle Cycling Routes – Esra Camci</title>
+    <title>Cycling Routes – Esra Camci</title>
     <!-- Begin Jekyll SEO tag v2.7.1 -->
 <meta name="generator" content="Jekyll v4.2.0" />
-<meta property="og:title" content="Seattle Cycling Routes" />
+<meta property="og:title" content="Cycling Routes" />
 <meta name="author" content="Esra Camci" />
 <meta property="og:locale" content="en_US" />
 <link rel="canonical" href="esracamci.github.io/seattle-routes/" />
 <meta property="og:url" content="esracamci.github.io/seattle-routes/" />
 <meta property="og:site_name" content="Esra Camci" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Seattle Cycling Routes" />
+<meta property="twitter:title" content="Cycling Routes" />
 <script type="application/ld+json">
-{"url":"esracamci.github.io/seattle-routes/","author":{"@type":"Person","name":"Esra Camci"},"@type":"WebPage","headline":"Seattle Cycling Routes","@context":"https://schema.org"}</script>
+{"url":"esracamci.github.io/seattle-routes/","author":{"@type":"Person","name":"Esra Camci"},"@type":"WebPage","headline":"Cycling Routes","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
@@ -26,8 +26,8 @@
 <meta name="author" content="Esra Camci" />
 
 
-<meta property="og:title" content="Seattle Cycling Routes" />
-<meta property="twitter:title" content="Seattle Cycling Routes" />
+<meta property="og:title" content="Cycling Routes" />
+<meta property="twitter:title" content="Cycling Routes" />
 
 
 
@@ -46,6 +46,17 @@
 
 
 
+<meta property="og:image" content="https://esracamci.github.io/images/e-profile.png" />
+
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   crossorigin=""/>
+ <!-- Make sure you put this AFTER Leaflet's CSS -->
+ <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script>
+
     <link rel="stylesheet" type="text/css" href="/assets/style.css" />
     <link rel="alternate" type="application/rss+xml" title="Esra Camci - " href="/feed.xml" />
     <link rel="canonical" href="esracamci.github.io/seattle-routes/" />
@@ -59,7 +70,18 @@
 
 
 <!-- GOOGLE ANALYTICS -->
-    
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FKQ5GBFZ4H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FKQ5GBFZ4H');
+</script>
+
+
+
 
   </head>
 
@@ -85,9 +107,7 @@
 <!-- CHANGE NAVIGATION -->
       <nav role="navigation">
    
-      <a href="/CV/" >CV</a>
-   
-      <a href="/blog/" >Blog</a>
+      <a href="/index.html" >CV</a>
    
       <a href="/ref-frame/" >CranioRef</a>
    
@@ -105,9 +125,56 @@
         <div id="main" role="main" class="container">
           <article class="page">
   <div class="entry">
-    <center><h3>Favorite cycling routes within Seattle city limits</h3>
-<iframe src="https://www.google.com/maps/d/u/0/embed?mid=147_7EfQSdwWh3WkplOa1eSE7BbtTYa4s" width="700" height="900"></iframe>
-  &lt;/div&gt;
+    <center>Quick trips within Seattle city limits
+<iframe src="https://www.google.com/maps/d/u/0/embed?mid=147_7EfQSdwWh3WkplOa1eSE7BbtTYa4s" width="600" height="600"></iframe>
+ 
+
+
+
+<div id="mapid" style="width: 60%; height: 700px;"></div>
+<script>
+
+var mymap = L.map('mapid').setView([47.62, -122.32], 11);
+
+var marker = L.marker([47.61522,-122.35555]).addTo(mymap);
+
+L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    maxZoom: 18,
+    id: 'mapbox/streets-v11',
+    tileSize: 512,
+    zoomOffset: -1,
+    accessToken: 'pk.eyJ1IjoiZXNyYWNhbWNpIiwiYSI6ImNrbTN5amRtdzFtamcybnFtZXphNWxwdWgifQ.Gy5OwMVmW3HdTDL7bfBK0Q'
+}).addTo(mymap);
+
+
+ var map = L.map('map').setView([51.505, -0.09], 13);
+    
+    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+    
+    var plottedPolyline = L.Polyline.Plotter([
+        [51.53662, -0.09218],
+        [51.54281, -0.10712],
+        [51.5394, -0.12394],
+        [51.53246, -0.12772],
+        [51.50735, -0.09253],
+        [51.53085, -0.0563],
+        [51.53865, -0.06008],
+        [51.54164, -0.07502],
+        [51.53662, -0.08875]
+    ],{
+        weight: 5
+    }).addTo(map);
+
+
+pk.eyJ1IjoiZXNyYWNhbWNpIiwiYSI6ImNrbTN5amRtdzFtamcybnFtZXphNWxwdWgifQ.Gy5OwMVmW3HdTDL7bfBK0Q
+
+
+
+</script>
+
 </center>
 
   </div>
@@ -143,7 +210,14 @@
       </div>
     </div>
 
-    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FKQ5GBFZ4H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-FKQ5GBFZ4H');
+</script>
   </body>
 </html>
